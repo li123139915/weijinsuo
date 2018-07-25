@@ -1,0 +1,403 @@
+@mainColor: #f10215;
+
+/* 初始样式 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 12px/100% "雅黑";
+    color: grey;
+}
+
+a {
+    text-decoration: none;
+    color: grey;
+}
+
+/* 头部样式*/
+#header {
+    border-bottom: 1px solid #ccc;
+    a {
+        text-decoration: none;
+    }
+    .container {
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+
+        .row>div {
+            border-right: 1px solid #ccc;
+            &:last-child {
+                border-right: none;
+                button {
+                    background-color: @mainColor;
+                    color: #fff;
+                    border: none;
+                    margin-right: 10px;
+                    margin-bottom: 4px;
+                }
+            }
+            &:first-child {
+                position: relative;
+                a:hover {
+                    &+img {
+                        display: block;
+                    }    
+                }
+                img {
+                    position: absolute;
+                    z-Index: 20;
+                    top: 40px;
+                    left: 50%;
+                    transform: translate(-50%);
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+/* 导航栏样式 */
+#nav {
+    margin-bottom: 0px;
+    font-size: 14px;
+    z-Index: 19;
+    width: 100%;
+    top: 0;
+    .container {
+        .navbar-header {
+            a {
+                height: 82px;
+                >i {
+                    font-size: 30px;
+                    line-height: 52px;
+                    &:first-child {
+                        color: @mainColor;
+                    }
+                }
+            }
+            button {
+                margin-top: 25px;
+            }
+        }
+        .collapse {
+            .navbar-nav li a {
+                background-color: #fff;
+                height: 82px;
+                line-height: 52px;
+                &:hover {
+                    border-bottom: 2px solid @mainColor;
+                }
+            }
+        }
+    }
+}
+
+/* 轮播图 */
+#slider {
+    .carousel-inner {
+        .bigBg {
+            height: 410px;
+            background-position: center center;
+        }
+        .smBg {
+            width: 100%;
+            
+        }
+    }
+}
+
+
+/* 支付保障区域 */
+#payment {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    .container {
+        .row {
+            >div {
+                margin-top: 20px;
+               a {
+                   text-decoration: none;
+                   &:hover {
+                       color: @mainColor;
+                   }
+                   .media-left {
+                    line-height: 40px;
+                }
+               }
+            }
+        }
+    }
+}
+
+/* 预约区域 */
+#order {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    font-size:14px;
+    .container {
+        .row {
+            >div {
+                height: 60px;
+                line-height: 60px;
+                span,a {
+                    text-decoration: none;
+                    color: @mainColor;
+                }
+            }
+            >div:last-child a {
+                text-decoration: none;
+                color: rgb(35,82,124);
+                i {
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}
+
+/* 商品区域 */
+#products {
+    padding: 40px 0;
+    background-color: #eee;
+        .ul-wraper{
+            width: 100%;
+            overflow-x: auto;
+            .nav-tabs { 
+                font-size: 16px;
+                width: 600px;
+                li.active a {   
+                    border: 0;
+                    border-bottom: 3px solid @mainColor;      
+                }
+            }
+        }
+        
+        .tab-content {
+            font-size: 14px;
+            .row {
+                >div {
+                    height: 160px;
+                    border-right: 20px solid #eee;
+                    margin-top: 20px;
+                    display:flex;
+                    color: black;
+                    background-color: #fff;
+                    padding-right: 0;
+                    margin-bottom: 20px;
+                    .left {
+                        flex:1;
+                        border-right: 1px dashed #ccc;
+                        display: flex;
+                        flex-direction: column;
+                        position: relative;
+                        .name {
+                            flex: 1;
+                            font-size: 18px;
+                            text-align: center;
+                            line-height: 40px;
+                        }
+                        .price {
+                            font-size: 14px;
+                            flex: 1;
+                            display: flex;
+                            position: relative;
+                            >div {
+                                flex:1;
+                                display: flex;
+                                flex-direction: column;
+                                >span {
+                                    line-height: 18px;
+                                }
+                            }
+                            .price-right>span {
+                                text-align: right;
+                                padding-right: 15px;
+                            }
+                        }
+                        .garden1 {
+                            border-radius: 8px;
+                            height: 16px;
+                            width: 16px;
+                            background-color: #fff;
+                            position: absolute;
+                            right: -8px;
+                            top: -8px;
+                        }
+                        .garden2 {
+                            border-radius: 8px;
+                            height: 16px;
+                            width: 16px;
+                            background-color: #fff;
+                            position: absolute;
+                            bottom: -8px;
+                            right: -8px;
+                        }
+                    }
+                    .right {
+                        flex-basis: 119px;
+                        text-align: center;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        >div {   
+                            margin-bottom: 10px;
+                            >span {
+                                font-size: 30px;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+                >div:nth-child(2) {
+                    .right {
+                        position: relative;
+                        .icon {
+                            position: absolute;
+                            top: 10px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            >i {
+                                width: 20px;
+                                height: 20px;
+                                line-height: 20px;
+                                text-align: center;
+                                padding: 0;
+                                font-style: normal;
+                                background-color: #fff;
+                                border-radius: 0;
+                                &:first-child {
+                                    color: yellowgreen;
+                                    border-color: yellowgreen;
+                                }
+                                &:last-child {
+                                    color: hotpink;
+                                    border-color: hotpink;
+                                }
+                            }
+                        }
+                    }
+                }
+                >div.active {
+                    background-color: @mainColor;
+                    color: #fff;
+                    .name {
+                        position: relative;
+                        &::before {
+                            content: "\e915";
+                            font-family: 'itcast';
+                            left: -15px;
+                            top: -5px;
+                            font-size: 30px;
+                            position: absolute;
+                        }
+                    }
+                }
+            }
+        }
+
+}
+
+/* 新闻区域 */
+#news {
+    padding: 40px 0;
+    .cow {
+        >div {
+            &:first-child {
+                 h4 {
+                    color: #aaa;
+                    text-align: center;
+                    padding-bottom: 10px;
+                    width: 100%;
+                    border-bottom: 1px dashed #ccc;
+                    position: relative;
+                    i {
+                        border-radius: 5px;
+                        border: 1px solid #ccc;
+                        width: 10px;
+                        height: 10px;
+                        display: inline-block;
+                        position: absolute;
+                        right: -10px;
+                        bottom: -5px;
+                    }
+                }
+                
+            }
+            &:nth-child(2) {
+                ul {
+                    border-bottom: 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    @media (max-width:991px) {
+                        flex-direction: row;   
+                    }
+                    li {
+                        margin-bottom: 20px;                      
+                        a {   
+                            border-radius: 30px;
+                            height: 60px;
+                            width: 60px;
+                            background-color: #ccc;
+                            font-size: 30px;
+                            text-align: center;
+                            line-height: 40px;
+                            color: #eee;
+                            
+                        }
+                    }
+                    li.active a {
+                        background-color: @mainColor;
+                        border-bottom: none;
+                    }
+                }
+            }
+            &:last-child {
+                ul {
+                    list-style: none;
+                    padding-left: 20px;
+                    li {
+                        font-size: 14px;
+                        line-height: 40px;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+/* 底部区域 */
+#footer {
+    padding: 60px 0;
+    @media (max-width:768){
+        padding: 0;
+    }
+    h3 {      
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    .partner {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        a {
+            @media (max-width:768){
+                width: 25%;
+            }
+            padding: 0 15px;
+            font-size: 50px;
+            line-height: 50px;
+            text-decoration: none;
+            &:hover {
+                color: @mainColor;
+                border-bottom: 0;   
+            }
+        }
+    }
+
+}
